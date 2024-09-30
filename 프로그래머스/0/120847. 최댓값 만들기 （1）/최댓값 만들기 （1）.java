@@ -8,8 +8,7 @@ class Solution {
                 max2 = max1;
                 max1 = number;
             }
-            else if (number > max2) max2 = number;
-                
+            else if (number > max2) max2 = number;                
         }
         
         return max1 * max2;
