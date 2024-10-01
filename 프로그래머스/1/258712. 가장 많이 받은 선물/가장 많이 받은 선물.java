@@ -24,7 +24,7 @@ class Solution {
                 int giveCnt = giftMap.get(friends[i])[j];
                 int takeCnt = giftMap.get(friends[j])[i];
                 if (giveCnt > takeCnt || giveCnt == takeCnt && (giftIdxArr[i] > giftIdxArr[j])) giftCnt++;
-            }            
+            }         
             maxGiftCnt = Math.max(maxGiftCnt, giftCnt);
         }
 
