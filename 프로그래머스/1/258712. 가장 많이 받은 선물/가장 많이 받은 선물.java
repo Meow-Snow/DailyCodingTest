@@ -4,13 +4,10 @@ class Solution {
     public int solution(String[] friends, String[] gifts) {
         HashMap<String, Integer> idMap = new HashMap<>();
         for (int i = 0; i < friends.length; i++) idMap.put(friends[i], i);
-        
+
         HashMap<String, int[]> giftMap = new HashMap<>();
-        for (String friend : friends) {
-            int[] giftArr = new int[friends.length];
-            giftMap.put(friend, giftArr);
-        }
-        
+        for (String friend : friends) giftMap.put(friend, new int[friends.length]);
+
         int[] giftIdxArr = new int[friends.length];
         for (String gift : gifts) {
             String[] exchangers = gift.split("\\s+");
@@ -18,7 +15,7 @@ class Solution {
             giftIdxArr[idMap.get(exchangers[0])]++;
             giftIdxArr[idMap.get(exchangers[1])]--;
         }
-        
+
         int maxGiftCnt = 0;
         for (int i = 0; i < friends.length; i++) {
             int giftCnt = 0;
@@ -30,7 +27,7 @@ class Solution {
             }            
             maxGiftCnt = Math.max(maxGiftCnt, giftCnt);
         }
-        
+
         return maxGiftCnt;
     }
 }
