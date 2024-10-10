@@ -14,7 +14,7 @@ class Solution {
 
 
 // 스트림을 사용하면 간결한 코드만으로 해결할 수 있다
-// import java.util.*;
+// import java.util.stream.IntStream;
 
 // class Solution {
 //     public int[] solution(long n) {
