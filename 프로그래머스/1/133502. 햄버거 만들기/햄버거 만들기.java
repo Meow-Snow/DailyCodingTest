@@ -1,5 +1,6 @@
 class Solution {
     private static final String PATTERN = "1231";
+    private static final int lenP = PATTERN.length();
     
     public int solution(int[] ingredients) {
         StringBuilder sb = new StringBuilder();
@@ -7,8 +8,9 @@ class Solution {
         for (int ingredient : ingredients) {
             sb.append(ingredient);
             
-            if (sb.length() >= 4 && sb.substring(sb.length() - 4, sb.length()).equals(PATTERN)) {
-                sb.delete(sb.length() - 4, sb.length());
+            int lenSB = sb.length();            
+            if (lenSB >= lenP && sb.substring(lenSB - lenP, lenSB).equals(PATTERN)) {
+                sb.delete(lenSB - lenP, lenSB);
                 answer++;
             }
         }
