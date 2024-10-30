@@ -2,18 +2,21 @@ class Solution {
     public int solution(int n) {
         int answer = 0;
         for (int i = 2; i <= n; i++) {
-            boolean isPrimeNum = true;
-            for (int j = 2; j <= Math.sqrt(i); j++) {
-                if (i % j == 0) {
-                    isPrimeNum = false;
-                    break;
-                }                
-            }
-            if (isPrimeNum) {
+            if (isPrimeNum(i)) {
                 answer++;
             }
         }
         
         return answer;
+    }
+    
+    private boolean isPrimeNum(int n) {
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        
+        return true;
     }
 }
