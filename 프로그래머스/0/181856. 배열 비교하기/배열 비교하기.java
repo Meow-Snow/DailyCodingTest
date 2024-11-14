@@ -4,9 +4,7 @@ class Solution {
             int sum1 = getSum(arr1);
             int sum2 = getSum(arr2);
             
-            if (sum1 > sum2) return 1;
-            else if (sum1 < sum2) return -1;
-            else return 0;
+            return (sum1 > sum2)? 1 : (sum1 < sum2)? -1 : 0;
         }
         
         return (arr1.length > arr2.length)? 1 : -1;
