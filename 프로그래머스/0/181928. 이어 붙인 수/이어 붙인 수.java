@@ -1,3 +1,6 @@
+// Integer.parseInt() -> 문자열을 기본형(primitive type) 정수로 변환
+// Integer.valueOf() -> 문자열을 참조형(reference type, Wrapper Class) 정수로 변환
+
 class Solution {
     public int solution(int[] num_list) {
         StringBuilder odd = new StringBuilder();
