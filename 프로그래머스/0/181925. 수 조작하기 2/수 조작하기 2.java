@@ -1,5 +1,5 @@
 class Solution {
-    private String[] cmd = {"w", "s", "d", "a"};
+    private static String[] cmd = {"w", "s", "d", "a"};
     public String solution(int[] numLog) {
         StringBuilder sb = new StringBuilder();
         String temp = "";
