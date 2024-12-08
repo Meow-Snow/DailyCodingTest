@@ -1,14 +1,15 @@
 class Solution {
     public int solution(int a, int b, int c) {
-        int powSum1 = getPowSum(a, b, c, 1), powSum2 = getPowSum(a, b, c, 2), powSum3 = getPowSum(a, b, c, 3);
+        int answer = 1;
+        int cnt = 1;        
+        if (a == b || b == c || c == a) cnt++;
+        if (a == b && b == c) cnt++;
         
-        if (a != b && b != c && c != a) {
-            return powSum1;
-        } else if (a == b && b == c) {
-            return powSum1 * powSum2 * powSum3;
-        } else {
-            return powSum1 * powSum2;
+        for (int i = 1; i <= cnt; i++) {
+            answer *= getPowSum(a, b, c, i);
         }
+        
+        return answer;
     }
     
     private int getPowSum(int base1, int base2, int base3, int exponent) {
