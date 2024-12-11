@@ -9,6 +9,6 @@ class Solution {
         
         Collections.sort(strList);
         
-        return strList.toArray(new String[0]);
+        return strList.toArray(String[]::new);
     }
 }
