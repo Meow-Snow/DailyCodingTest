@@ -1,3 +1,6 @@
+// replaceAll()과 trim()을 활용하면 간단히 해결 가능
+// replace()로는 정규식 사용 불가
+
 class Solution {
     public String[] solution(String myStr) {
         String[] strArr = myStr.replaceAll("[abc]+", " ").trim().split(" ");
