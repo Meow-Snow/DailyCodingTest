@@ -1,3 +1,6 @@
+// 10진수를 radix진수로 변환 : Integer.toString(int 10진수, int radix);
+// radix진수를 10진수로 변환 : Integer.parseInt(String radix진수, int radix);
+
 class Solution {
     public int[] solution(String s) {        
         int[] answer = new int[2];
