@@ -1,15 +1,13 @@
 class Solution {
     public int[] solution(String s) {        
         int[] answer = new int[2];
-        String prev;
+        int prev, cur;
         while (!s.equals("1")) {
-            prev = s;
-            s = s.replace("0", "");
-            
+            prev = s.length();
+            cur = s.replace("0", "").length();            
             answer[0]++;
-            answer[1] += prev.length() - s.length();
-            
-            s = String.valueOf(Integer.toString(Integer.valueOf(s.length()), 2));
+            answer[1] += prev - cur;            
+            s = Integer.toString(cur, 2);
         }        
         
         return answer;
