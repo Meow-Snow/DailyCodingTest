@@ -12,3 +12,19 @@ class Solution {
         return rankList.get(0)[1] * 10000 + rankList.get(1)[1] * 100 + rankList.get(2)[1];
     }
 }
+
+
+
+// PriorityQueue를 활용한 방법도 고민해보자
+// import java.util.*;
+
+// class Solution {
+//     public int solution(int[] rank, boolean[] attendance) {
+//         Queue<Integer> pq = new PriorityQueue<>((a, b) -> rank[a] - rank[b]);
+//         for (int i = 0; i < rank.length; i++) {
+//             if (attendance[i]) pq.add(i);
+//         }
+
+//         return pq.poll() * 10000 + pq.poll() * 100 + pq.poll();
+//     }
+// }
