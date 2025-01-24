@@ -13,7 +13,7 @@ class Solution {
             }
         }
                 
-        return cntDangerZones(flags);
+        return cntSafeZones(flags);
     }
     
     private boolean isOnTheBoard(int[][] board, int l, int w) {
@@ -22,7 +22,7 @@ class Solution {
         return true;
     }
     
-    private int cntDangerZones(boolean[][] flags) {
+    private int cntSafeZones(boolean[][] flags) {
         int cnt = 0;
         for (int i = 0; i < flags.length; i++) {
             for (int j = 0; j < flags[0].length; j++) {
