@@ -3,10 +3,9 @@ import java.util.*;
 class Solution {
     public int solution(int a, int b, int c, int d) {        
         Map<Integer, Integer> map = new HashMap<>();
-        map.put(a, map.getOrDefault(a, 0) + 1);
-        map.put(b, map.getOrDefault(b, 0) + 1);
-        map.put(c, map.getOrDefault(c, 0) + 1);
-        map.put(d, map.getOrDefault(d, 0) + 1);
+        for (int num : new int[]{a, b, c, d}) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
         
         List<int[]> list = new ArrayList<>();
         for (int key : map.keySet()) {
