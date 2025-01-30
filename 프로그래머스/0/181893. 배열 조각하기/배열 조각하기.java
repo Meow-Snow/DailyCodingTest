@@ -1,3 +1,6 @@
+// Arrays.copyOfRange(originalArr, startIdx, endIdx);
+// System.arraycopy(originalArr, startIdx1, newArr, startIdx2, offset);
+
 import java.util.Arrays;
 
 class Solution {
